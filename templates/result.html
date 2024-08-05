@@ -1,0 +1,92 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Results</title>
+</head>
+<body>
+    <h1>Aggregated Sentiment Analysis Results</h1>
+    <h2>Sentence Sentiment Count</h2>
+    <ul>
+        {% for sentiment, count in results['sentence_sentiment'].items() %}
+        <li>{{ sentiment }}: {{ count }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Sarcasm Count</h2>
+    <ul>
+        {% for sarcasm, count in results['sarcasm'].items() %}
+        <li>{{ sarcasm }}: {{ count }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Emoji Sentiment Count</h2>
+    <ul>
+        {% for emoji_sentiment, count in results['emoji_sentiment'].items() %}
+        <li>{{ emoji_sentiment }}: {{ count }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Punctuation Sentiment Count</h2>
+    <ul>
+        {% for punctuation_sentiment, count in results['punctuation_sentiment'].items() %}
+        <li>{{ punctuation_sentiment }}: {{ count }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Final Sentiment Count</h2>
+    <ul>
+        {% for final_sentiment, count in results['final_sentiment'].items() %}
+        <li>{{ final_sentiment }}: {{ count }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Results</title>
+</head>
+<body>
+    <h1>Sentiment Analysis Results</h1>
+    <!-- <p>Final Sentiment Count:</p>
+    <ul>
+        <li>Sarcastic: {{ results['final_sentiment'].get('Sarcastic', 0) }}</li>
+        <li>Negative: {{ results['final_sentiment'].get('Negative', 0) }}</li>
+        <li>Positive: {{ results['final_sentiment'].get('Positive', 0) }}</li>
+    </ul>
+     -->
+    <p>Details:</p>
+    <ul>
+        <li>Sentence Sentiment Counts:
+            <ul>
+                {% for sentiment, count in results['sentence_sentiment'].items() %}
+                <li>{{ sentiment }}: {{ count }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li>Sarcasm Counts:
+            <ul>
+                {% for sarcasm, count in results['sarcasm'].items() %}
+                <li>{{ sarcasm }}: {{ count }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li>Emoji Sentiment Counts:
+            <ul>
+                {% for emoji_sentiment, count in results['emoji_sentiment'].items() %}
+                <li>{{ emoji_sentiment }}: {{ count }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li>Punctuation Sentiment Counts:
+            <ul>
+                {% for punctuation_sentiment, count in results['punctuation_sentiment'].items() %}
+                <li>{{ punctuation_sentiment }}: {{ count }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
+    <p><a href="/">Revise Next Post</a></p>
+</body>
+</html>
